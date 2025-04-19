@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏详情 - freeGame.io</title>
+    <link rel="stylesheet" href="12.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">freeGame.io</a>
+            <div class="search-user">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索游戏...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-profile" id="userProfile">
+                    <button class="login-btn" id="loginBtn">登录</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 游戏详情内容 -->
+    <div class="container game-detail">
+        <div class="game-detail-header">
+            <img src="https://via.placeholder.com/250x350" alt="游戏封面" class="game-detail-cover">
+            <div class="game-detail-info">
+                <h1 class="game-detail-title" id="gameTitle">星际探险</h1>
+                <p class="game-detail-developer">开发者: 星际工作室</p>
+                <div class="game-detail-stats">
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span>评分: 4.8/5 (1242 评价)</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-download"></i>
+                        <span>下载量: 15,678</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>发布日期: 2023-05-15</span>
+                    </div>
+                </div>
+                <p class="game-detail-description">
+                    《星际探险》是一款融合了科幻、冒险和解谜元素的独立游戏。玩家将扮演一名宇航员，在神秘的外星世界中探索未知的文明和危险的生物。游戏中包含丰富的剧情和精美的画面，给玩家带来沉浸式的体验。
+                </p>
+                <div class="game-tags">
+                    <span class="game-tag">科幻</span>
+                    <span class="game-tag">冒险</span>
+                    <span class="game-tag">解谜</span>
+                    <span class="game-tag">独立游戏</span>
+                    <span class="game-tag">3D</span>
+                </div>
+                <div class="game-detail-actions">
+                    <button class="btn btn-primary" onclick="goToPayment()">购买 ¥39.99</button>
+                    <button class="btn btn-outline"><i class="far fa-heart"></i> 加入愿望单</button>
+                </div>
+            </div>
+        </div>
+        <div class="game-screenshots">
+            <h3>游戏截图</h3>
+            <div class="screenshot-grid">
+                <img src="https://via.placeholder.com/200x120" alt="游戏截图" class="screenshot">
+                <img src="https://via.placeholder.com/200x120" alt="游戏截图" class="screenshot">
+                <img src="https://via.placeholder.com/200x120" alt="游戏截图" class="screenshot">
+                <img src="https://via.placeholder.com/200x120" alt="游戏截图" class="screenshot">
+                <img src="https://via.placeholder.com/200x120" alt="游戏截图" class="screenshot">
+            </div>
+        </div>
+        <div class="reviews-section">
+            <div class="section-title">
+                <h2>玩家评价</h2>
+                <a href="#" class="view-all">查看全部 <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- 评价1 -->
+            <div class="review">
+                <img src="https://via.placeholder.com/50" alt="用户头像" class="review-avatar">
+                <div class="review-content">
+                    <div class="review-header">
+                        <span class="review-username">游戏爱好者 <span class="developer-badge">开发者</span></span>
+                        <span class="review-date">2023-06-10</span>
+                    </div>
+                    <p class="review-text">这个游戏的画面和音效都非常出色，剧情也很吸引人。唯一的缺点就是游戏有点难度，希望开发者能考虑增加一些提示。</p>
+                    <div class="review-actions">
+                        <div class="review-action"><i class="far fa-thumbs-up"></i> 42</div>
+                        <div class="review-action"><i class="far fa-thumbs-down"></i> 3</div>
+                        <div class="review-action"><i class="far fa-comment"></i> 回复</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 评价2 -->
+            <div class="review">
+                <img src="https://via.placeholder.com/50" alt="用户头像" class="review-avatar">
+                <div class="review-content">
+                    <div class="review-header">
+                        <span class="review-username">星际迷</span>
+                        <span class="review-date">2023-06-05</span>
+                    </div>
+                    <p class="review-text">作为一个科幻迷，我非常喜欢这个游戏。探索未知星球的感觉真的很棒，游戏的谜题设计也很巧妙。强烈推荐给喜欢科幻题材的玩家！</p>
+                    <div class="review-actions">
+                        <div class="review-action"><i class="far fa-thumbs-up"></i> 28</div>
+                        <div class="review-action"><i class="far fa-thumbs-down"></i> 1</div>
+                        <div class="review-action"><i class="far fa-comment"></i> 回复</div>
