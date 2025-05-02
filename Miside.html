@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('wanetime.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #e5e7eb;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .clue-container {
+            border: 1px solid #374151;
+            border-radius: 0.375rem;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            background-color: rgba(31, 41, 55, 0.8);
+            position: relative;
+            max-width: 800px;
+        }
+
+        .clue-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #ff4d4d;
+        }
+
+        .clue-hint {
+            color: #9ca3af;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .clue-content {
+            line-height: 1.6;
+        }
+
+        .clue-reveal {
+            display: none;
+        }
+
+        .clue-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+            color: #60a5fa;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: #60a5fa;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+
+        footer {
+            background-color: rgba(10, 10, 10, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-gray-900 py-4">
+        <div class="container mx-auto flex justify-center items-center px-4">
+            <a href="#" class="text-2xl font-bold text-purple-500">Miside</a>
+        </div>
+    </nav>
+
+    <!-- 线索引导页面 -->
+    <section id="clue-guide" class="container mx-auto py-16 px-4">
+        <div class="clue-container hover-scale">
+            <div class="clue-title">Welcome to this website</div>
+            <div class="clue-hint">There's a mystery waiting for you.</div>
+            <p class="clue-content">I can't guarantee the privacy of your personal information. But I can tell you
+                responsibly that there's nothing here... except a string of text given to me by a mysterious person:
+                (It hides in a place where it is constructed......) <?php echo base64_encode：5q275Lqh5a+G6ZKl77yaYWRhZGJn.html; ?></p>
+            <div class="clue-toggle" onclick="toggleClue(this)">
+                <i class="fa-solid fa-eye"></i> Check hidden clue
+            </div>
+            <div class="clue-reveal">
+                <div class="clue-content">The key might be the crucial element to unlock the secret.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社交链接 -->
+    <div class="social-links">
+        <a href="https://www.bilibili.com" target="_blank"><i class="fa-brands fa-bilibili"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 py-8 mt-4">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-sm">Copyright &copy; 2025 Miside ARG Official Website</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleClue(element) {
+            const reveal = element.nextElementSibling;
+            if (reveal.style.display === 'none') {
+                reveal.style.display = 'block';
+                element.innerHTML = '<i class="fa-solid fa-eye-slash"></i> Hide clue';
+            } else {
+                reveal.style.display = 'none';
+                element.innerHTML = '<i class="fa-solid fa-eye"></i> Check hidden clue';
+            }
+        }
+    </script>
+</body>
+
+</html>    
