@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miside ARG Terminal</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #terminal {
+            border: 1px solid #0f0;
+            padding: 10px;
+            min-height: 300px;
+        }
+
+        #input-line {
+            display: flex;
+            align-items: center;
+        }
+
+        #prompt {
+            margin-right: 5px;
+        }
+
+        #command-input {
+            background-color: transparent;
+            border: none;
+            color: #0f0;
+            font-family: 'Courier New', Courier, monospace;
+            outline: none;
+            width: 100%;
+        }
+
+        #image-display {
+            margin-top: 20px;
+        }
+
+        #image-display img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="terminal">
+        <p>Welcome to the Miside ARG Terminal!</p>
+        <p>You've received a mysterious death key clue: Death Key: adadbg</p>
+        <p>Try to solve this clue or type 'hint' for a hint.</p>
+        <div id="input-line">
+            <span id="prompt">$</span>
+            <input type="text" id="command-input" autofocus>
+        </div>
+        <div id="image-display"></div>
+    </div>
+    <script>
+        const terminal = document.getElementById('terminal');
+        const input = document.getElementById('command-input');
+        const imageDisplay = document.getElementById('image-display');
+
+        input.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                const command = input.value.trim().toLowerCase();
+                const outputLine = document.createElement('p');
+                outputLine.textContent = `$ ${command}`;
+                terminal.appendChild(outputLine);
+
+                if (command === 'hint') {
+                    const hintLine = document.createElement('p');
+                    hintLine.textContent = 'Hint: This key might be related to some kind of cryptography or encoding method. Think about the Base64 - encrypted information you saw before.';
+                    terminal.appendChild(hintLine);
+                } else if (command === 'adadbg') {
+                    const img = document.createElement('img');
+                    img.src = 'error.png'; 
+                    img.alt = 'Clue Image';
+                    imageDisplay.appendChild(img);
+                    const successLine = document.createElement('p');
+                    successLine.textContent = 'You entered the correct key! Here is a clue image.';
+                    terminal.appendChild(successLine);
+                } else if (command === 's 391237') {
+                    const downloadMessage = document.createElement('p');
+                    downloadMessage.textContent = 'Redirecting to the download page...';
+                    terminal.appendChild(downloadMessage);
+                    window.location.href = 'lastTime.png'; 
+                } else {
+                    const errorLine = document.createElement('p');
+                    errorLine.textContent = 'Sorry, your input is incorrect. Please try again or type "hint" for a hint.';
+                    terminal.appendChild(errorLine);
+                }
+
+                input.value = '';
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+        });
+    </script>
+</body>
+
+</html>    
